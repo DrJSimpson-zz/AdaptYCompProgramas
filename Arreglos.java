@@ -3,10 +3,16 @@ import java.util.Scanner;
 public class Arreglos {
 	
 	public static void main(String[] args) {
+		
+	}
+
+	public static void arreglosEj2() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Ingrese el tamaño del arreglo");
 		int tamanio = sc.nextInt();
-		//
+		//creo el arreglo con el tamaño que ingresa el usuario
 		int[] ejemplo2 = new int[tamanio];
+		System.out.println("A continuación ingrese " + ejemplo2.length + " numeros");
 		//itero para cargar
 		//nombreDelArreglo.length me retorna el tamaño del arreglo
 		for (int i = 0; i < ejemplo2.length; i++) {
@@ -17,6 +23,8 @@ public class Arreglos {
 		//hasta 1 antes del tamaño del arreglo
 		//itero para mostrar
 		System.out.println("-------------------------");
+		System.out.println("Los numeros ingresados fueron");
+		
 
 		for (int i = 0; i < ejemplo2.length; i++) {
 			System.out.println(ejemplo2[i]);
