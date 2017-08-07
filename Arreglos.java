@@ -3,7 +3,56 @@ import java.util.Scanner;
 public class Arreglos {
 	
 	public static void main(String[] args) {
-		
+		//cargamos puntajes de un juego por turnos
+		//si tenemos 2 jugadores, la posicion 0 guarda el puntaje
+		//del jugador 1 en el primer turno
+		//la posición 1 guarda el puntaje del jugador 2 en el 
+		//primer turno, y así sucesivamente
+		Scanner s = new Scanner(System.in);
+		System.out.println("Cuantos turnos se jugaron");
+		//averiguamos cuantos turnos se jugaron
+		int t = s.nextInt();
+		int[] score = new int[t*2];
+
+		//cargamos el puntaje para cada jugador para cada turno
+		//de forma secuencial
+		for (int i = 0; i < score.length; i++) {
+			if (i % 2 == 0) {
+				System.out.println("jugador 1 turno " + (i+1));
+			} else {
+				System.out.println("jugador 2 turno " + (i+1));
+			}	
+			score[i] = s.nextInt();
+		}
+
+		//averiguar quién ganó
+		int jugador1 = 0;
+		int jugador2 = 0;
+		for (int i = 0; i < score.length; i++) {
+			if (i % 2 == 0) {
+				jugador1 += score[i];
+			} else {
+				jugador2 += score[i];
+			}
+		}
+
+		if (jugador1 > jugador2) {
+			System.out.println("Gano el jugador 1");
+		} else if (jugador2 > jugador1) {
+			System.out.println("Gano el jugador 2");
+		} else {
+			System.out.println("Perdieron los dos");
+		}
+
+		System.out.println("------------------");
+		System.out.println("Ingrese el numero de ronda que desea ver");
+		int ronda = s.nextInt();
+		System.out.println("Score Jugador 1");
+		System.out.println("?????");
+		System.out.println("Score Jugador 2");
+		System.out.println("?????");
+
+
 	}
 
 	public static void arreglosEj2() {
