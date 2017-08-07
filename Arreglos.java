@@ -16,13 +16,20 @@ public class Arreglos {
 
 		//cargamos el puntaje para cada jugador para cada turno
 		//de forma secuencial
+		int turno = 1;
+		int playersLeft = 2;
 		for (int i = 0; i < score.length; i++) {
 			if (i % 2 == 0) {
-				System.out.println("jugador 1 turno " + (i+1));
+				System.out.println("jugador 1 turno " + turno);
 			} else {
-				System.out.println("jugador 2 turno " + (i+1));
+				System.out.println("jugador 2 turno " + turno);
 			}	
 			score[i] = s.nextInt();
+			playersLeft--;
+			if (playersLeft == 0) {
+				turno++;
+				playersLeft = 2;
+			}
 		}
 
 		//averiguar quién ganó
