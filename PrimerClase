@@ -1,0 +1,35 @@
+public class PrimerClase {
+    //Atributo
+    public static String saludo = "Hola mundo";
+    //método
+    public static void main(String[] args) {
+        Persona alumno = new Persona();
+        alumno.apellido = "test";
+        alumno.nombre = "nombre";
+        alumno.edad = 35;
+        System.out.println(alumno);
+        alumno.cumpleaños();
+        System.out.println(alumno);
+    }
+}
+
+class Persona {
+    //atributos
+    String nombre;
+    String apellido;
+    int edad;
+
+    public void cumpleaños() {
+        this.edad++;
+    }
+
+    //método
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
+}
