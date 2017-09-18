@@ -17,6 +17,17 @@ public class OOPAlumno {
 }
 
 //Esta clase va a estar afuera de la clase main
+
+/*
+Crear un método que se llame obtener apodo, este método tiene que devolver
+las dos primeras letras del nombre, y las tres primera del apellido.
+
+Crear un método que devuelva la dirección de correo que tendría esta persona
+por ejemplo, para: "Pepe Potamo" sería pepe.potamo@simonEET24.com.ar
+
+Crear un arreglo con 10 alumnos cargados al azar, mostrar el nombre y apellido
+de la persona mas alta, y de la persona mas baja.
+*/
 class Alumno {
 	//Atributos de la clase
 	String nombre;
