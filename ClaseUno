@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class ClaseUno {
+    public static void main(String[] args) {
+        System.out.println("Test");
+        Scanner s = new Scanner(System.in);
+
+        //Iterar desde 1 hasta n y mostrar los numeros pares
+        int n = s.nextInt();
+
+        for(int i = 1; i <= n; i++) {
+            System.out.println("El valor de i = " + i);
+            //Condicional simple
+            if (i % 2 == 0) {
+                System.out.println(i + " es par");
+            }
+        }
+
+        //Iterar desde 1 hasta m y mostrar los numeros pares e impares
+        //con su mensaje
+        int m = s.nextInt();
+
+        for(int i = 1; i <= m; i++) {
+            //Condicional que tiene un nombre y no me acuerdo
+            if (i % 2 == 0) {
+                System.out.println(i + " es par");
+            } else {
+                System.out.println(i + " es impar");
+            }
+        }
+
+        //Ejemplo sencillo de if anidado
+        int num = s.nextInt();
+
+        if (num > 0) {
+            System.out.println("Es positivo");
+        } else if (num < 0) {
+            System.out.println("Es negativo");
+        } else {
+            System.out.println("El numero es 0");
+        }
+
+        System.out.println("Mire señor por favor ingrese un numero par, o no lo dejo salir.");
+        boolean esPar = false;
+        do {
+            esPar = s.nextInt() % 2 == 0;
+        } while (!esPar);
+    }
+}
